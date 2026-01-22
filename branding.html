@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding | F&B Branding Network</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', sans-serif; }
+        :root { --yellow: #f6e000; --black: #000000; --white: #ffffff; --mint: #91d3c6; }
+        body { background-color: var(--yellow); color: var(--black); overflow-x: hidden; }
+
+        /* --- NEW HOME BUTTON STYLE --- */
+        .home-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 3000;
+            background: var(--black);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease;
+        }
+        .home-btn:hover {
+            transform: scale(1.05);
+            background: var(--white);
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+
+        /* --- 2. SIDE HONORS TAB --- */
+        .side-tab {
+            position: fixed; left: 0; top: 40%; transform: translateY(-50%);
+            background: var(--mint); padding: 25px 12px; z-index: 1500;
+            border-radius: 0 8px 8px 0; display: flex; flex-direction: column; align-items: center;
+        }
+        .side-tab span { 
+            writing-mode: vertical-rl; text-orientation: mixed; 
+            font-size: 1.1rem; font-weight: 900; color: white; letter-spacing: 2px;
+        }
+
+        /* --- 3. HERO SECTION --- */
+        .hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 80px; }
+        .bear-logo { width: 130px; z-index: 10; margin-bottom: 15px; }
+        
+        .tag-group { display: flex; gap: 12px; z-index: 10; margin-bottom: 25px; }
+        .pill-btn-small { 
+            border: 3px solid var(--black); padding: 10px 24px; border-radius: 50px; 
+            font-size: 0.75rem; text-transform: uppercase; font-weight: 900; 
+        }
+
+        .main-headline { 
+            font-size: 14vw; line-height: 0.8; text-transform: uppercase; 
+            z-index: 5; text-align: center; width: 100%;
+        }
+
+        /* Collage Elements using your existed image names */
+        .collage-container { position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; }
+        .collage-img { position: absolute; width: 18vw; border: 4px solid var(--black); background: white; border-radius: 8px; box-shadow: 15px 15px 40px rgba(0,0,0,0.1); padding: 10px; }
+        .img1 { top: 30%; left: 5%; transform: rotate(-8deg); }
+        .img2 { top: 35%; right: 8%; width: 22vw; transform: rotate(5deg); }
+        .img3 { bottom: 10%; left: 10%; width: 15vw; transform: rotate(-3deg); }
+        .img4 { bottom: 15%; right: 15%; width: 18vw; transform: rotate(8deg); }
+
+        /* --- 4. CONTENT SECTIONS --- */
+        .section-container { padding: 80px 8%; position: relative; z-index: 10; }
+        .label { text-transform: uppercase; border-bottom: 5px solid var(--black); display: inline-block; padding-bottom: 5px; font-size: 1.4rem; margin-bottom: 40px; }
+        
+        .big-para { font-size: 5.8vw; line-height: 1; text-transform: uppercase; margin-bottom: 35px; letter-spacing: -2px; }
+        .sub-para { font-family: 'Arial', sans-serif; font-size: 1.3rem; font-weight: bold; line-height: 1.5; max-width: 900px; margin-bottom: 80px; }
+
+        /* --- 5. DELIVERABLES PILL --- */
+        .deliverables-header {
+            display: inline-block; border: 4px solid var(--black); padding: 15px 45px; border-radius: 60px;
+            font-size: 1.3rem; text-transform: uppercase; font-weight: 900; margin-bottom: 50px;
+        }
+        .deliverables-grid { 
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px; 
+            border-top: 3px solid var(--black); padding-top: 50px;
+        }
+        .deliv-item { font-size: 1.6rem; text-transform: uppercase; font-weight: 900; line-height: 1.2; }
+
+        @media (max-width: 768px) {
+            .main-headline { font-size: 18vw; }
+            .deliverables-grid { grid-template-columns: 1fr; }
+            .collage-img { width: 35vw; }
+            .home-btn { top: 20px; left: 20px; padding: 10px 18px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="home-btn">
+        <i class="fa-solid fa-arrow-left"></i> BACK TO HOME
+    </a>
+
+    <div class="side-tab">
+        <span>Branding</span>
+    </div>
+
+    <section class="hero">
+        <div class="collage-container">
+            <img src="tealive.png" class="collage-img img1" alt="Tealive">
+            <img src="pakmatwestern.png" class="collage-img img2" alt="Pak Mat">
+            <img src="marrybrown.png" class="collage-img img3" alt="Marrybrown">
+            <img src="ayamgepuk.png" class="collage-img img4" alt="Ayam Gepuk">
+        </div>
+        
+        <div class="tag-group">
+            <div class="pill-btn-small">Compelling</div>
+            <div class="pill-btn-small">Powerful</div>
+        </div>
+
+        <h1 class="main-headline">LEADING<br>BRANDING</h1>
+    </section>
+
+    <section class="section-container">
+        <div class="label">What we do</div>
+        <h2 class="big-para">We handcraft brands<br>that tell your story</h2>
+        <p class="sub-para">
+            Having your unique brand identity is your superpower — you standout in today's overcrowded marketplace. 
+            Your brand is filling a space in this world, and your brand story should really express that.
+        </p>
+
+        <h2 class="big-para">Compelling Brand Stories</h2>
+        <p class="sub-para">
+            We would like to think of ourselves as an orchestra conductor, guiding different aspects of your brand strategy to create a resonant symphony that speaks to people's hearts.
+        </p>
+    </section>
+
+    <section class="section-container" style="padding-bottom: 120px;">
+        <div class="deliverables-header">Deliverables</div>
+        
+        <div class="deliverables-grid">
+            <div class="deliv-item">Brand Story</div>
+            <div class="deliv-item">Visual Identity</div>
+            <div class="deliv-item">Brand Strategy</div>
+            <div class="deliv-item">Design System</div>
+            <div class="deliv-item">Brand Positioning</div>
+            <div class="deliv-item">Collateral Design</div>
+            <div class="deliv-item">Brand Archetypes</div>
+            <div class="deliv-item">Digital Assets</div>
+            <div class="deliv-item">Brand Guidelines</div>
+            <div class="deliv-item">Advertising</div>
+            <div class="deliv-item">Brand Design</div>
+            <div class="deliv-item">Packaging</div>
+            <div class="deliv-item">Brand Elements</div>
+            <div class="deliv-item">Creatives</div>
+            <div class="deliv-item">Messaging Framework</div>
+            <div class="deliv-item">Illustrations</div>
+        </div>
+    </section>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Entrance animation
+        gsap.from(".main-headline", { duration: 1.2, y: 100, opacity: 0, ease: "power4.out" });
+        
+        // Floating images effect for collage
+        gsap.to(".collage-img", {
+            y: -20,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            stagger: 0.5
+        });
+
+        // Staggered reveal for deliverables
+        gsap.from(".deliv-item", {
+            scrollTrigger: {
+                trigger: ".deliverables-grid",
+                start: "top 85%"
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.08
+        });
+    </script>
+</body>
+</html>
