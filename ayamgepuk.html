@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ayam Gepuk | Menu</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+/* HEADER */
+.menu-header {
+    background: #b11226;
+    color: #fff;
+    padding: 60px 80px;
+}
+
+.menu-header h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.menu-header p {
+    max-width: 500px;
+    opacity: 0.9;
+}
+
+/* MENU LIST */
+.menu-wrapper {
+    padding: 60px 80px;
+}
+
+.menu-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+}
+
+.menu-row img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.menu-text {
+    flex: 1;
+}
+
+.menu-text h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.menu-text p {
+    font-size: 14px;
+    color: #555;
+}
+
+.menu-actions {
+    text-align: right;
+}
+
+.menu-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #b11226;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.menu-actions button {
+    background: #b11226;
+    color: #fff;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ORDER BOX */
+.order-box {
+    background: #b11226;
+    color: #fff;
+    text-align: center;
+    padding: 60px;
+    margin: 80px;
+    border-radius: 16px;
+}
+
+.order-box a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 40px;
+    background: #fff;
+    color: #b11226;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* BACK */
+.back {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.back a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #b11226;
+}
+
+.menu-header {
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+}
+
+.header-logo img {
+    height: 70px;
+}
+
+.back {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.back a {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 2px solid #b11226;
+    border-radius: 40px;
+    color: #b11226;
+    font-weight: 700;
+    text-decoration: none;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.back a:hover {
+    background: #b11226;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(177, 18, 38, 0.35);
+}
+
+.menu-wrapper {
+    background: 
+        linear-gradient(
+            rgba(255,255,255,0.85),
+            rgba(255,255,255,0.95)
+        ),
+        url('gembus') center / cover no-repeat;
+}
+
+
+</style>
+</head>
+
+<body>
+    <audio autoplay loop>
+    <source src="jjcm.mp4" type="audio/mpeg">
+</audio>
+
+<!-- HEADER -->
+<section class="menu-header">
+    <h1>Menu Ayam Gepuk</h1>
+    <p>Ayam rangup dengan sambal pedas pilihan anda</p>
+    <div class="header-logo">
+    <img src="pak" alt="Pak Gembus Logo">
+</div>
+
+</section>
+
+<!-- MENU LIST -->
+<section class="menu-wrapper">
+
+<div class="menu-row">
+    <img src="ayam bumbu ori">
+
+    <div class="menu-text">
+        <h3>Ayam Bumbu Ori</h3>
+        <p>Ayam goreng dengan sambal pedas</p>
+    </div>
+
+    <div class="menu-actions">
+        <span class="menu-price">RM 19.90</span>
+    </div>
+</div>
+
+<div class="menu-row">
+    <img src="crispy">
+
+    <div class="menu-text">
+        <h3>Ayam Bumbu Crispy</h3>
+        <p>Ayam goreng rangup dengan sambal pedas</p>
+    </div>
+
+    <div class="menu-actions">
+        <span class="menu-price">RM 19.90</span>
+    </div>
+</div>
+
+<h2 style="margin-top:60px; color:#b11226;">Minuman</h2>
+<div class="menu-row">
+    <img src="green van java.png">
+    <div class="menu-text">
+        <h3>Green Van Java</h3>
+        <p>Minuman teh sejuk menyegarkan</p>
+    </div>
+    <div class="menu-actions">
+        <span class="menu-price">RM 5.90</span>
+    </div>
+</div>
+
+<div class="menu-row">
+    <img src="icedlemon.png">
+    <div class="menu-text">
+        <h3> Iced Lemon Tea</h3>
+        <p>Masam manis menyegarkan</p>
+    </div>
+    <div class="menu-actions">
+        <span class="menu-price">RM 5.90</span>
+    </div>
+</div>
+
+<div class="menu-row">
+    <img src="honey.png">
+    <div class="menu-text">
+        <h3>Honeydew Latte </h3>
+        <p>Minuman genzi</p>
+    </div>
+    <div class="menu-actions">
+        <span class="menu-price">RM 3.90</span>
+    </div>
+</div>
+
+<div class="menu-row">
+    <img src="orange.png">
+    <div class="menu-text">
+        <h3>Orange Fizz</h3>
+        <p>Dj Fuzz Fairuz</p>
+    </div>
+    <div class="menu-actions">
+        <span class="menu-price">RM 4.90</span>
+    </div>
+</div>
+
+<div class="menu-row">
+    <img src="bali.png">
+    <div class="menu-text">
+        <h3>Bali Blues</h3>
+        <p>Biru-biru Laut</p>
+    </div>
+    <div class="menu-actions">
+        <span class="menu-price">RM 2.50</span>
+    </div>
+</div>
+
+</section>
+
+<!-- PLACE ORDER -->
+<div class="order-box">
+    <h2>If you want more information</h2>
+    <p>Let's check it out</p>
+    <a href="https://ayamgepukpakgembus.com.my/food/" target="_blank">
+        Click here
+    </a>
+</div>
+
+<!-- BACK -->
+<div class="back">
+    <a href="index.html">← Back to F&B Brands</a>
+</div>
+
+</body>
+</html>
