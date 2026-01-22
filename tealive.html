@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tealive Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ================= HEADER ================= */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    padding:15px 50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #eee;
+    z-index:1000;
+}
+
+header img{
+    height:60px;
+}
+
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#6f2c91;
+    font-weight:600;
+    font-size:14px;
+}
+
+/* ================= HERO VIDEO ================= */
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:translate(-50%,-50%);
+}
+
+/* Overlay gelap */
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.3);
+}
+
+/* ================= PURPLE SECTION ================= */
+.section{
+    position:relative;
+    background:#6f63a6;
+    margin-top:-160px;
+    padding:200px 40px 80px;
+}
+
+/* Curve */
+.section::before{
+    content:"";
+    position:absolute;
+    top:-80px;
+    left:0;
+    width:100%;
+    height:160px;
+    background:#6f63a6;
+    border-radius:100% 100% 0 0;
+}
+
+/* ================= LAYOUT ================= */
+.container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:40px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar{
+    width:250px;
+}
+
+.sidebar button{
+    width:100%;
+    background:#2e1f63;
+    color:#ffd400;
+    border:none;
+    padding:15px;
+    border-radius:30px;
+    margin-bottom:15px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ================= CONTENT ================= */
+.content{
+    flex:1;
+    color:white;
+}
+
+.content h1{
+    font-size:48px;
+    color:#ffd400;
+    margin-bottom:15px;
+}
+
+.badge{
+    display:inline-block;
+    background:#2e1f63;
+    padding:8px 16px;
+    border-radius:20px;
+    margin-bottom:30px;
+    font-size:14px;
+}
+
+/* ================= MENU GRID ================= */
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+/* ================= CARD ================= */
+.card{
+    background:#f3e7d3;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    color:#333;
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 10px 5px;
+    font-size:18px;
+}
+
+.card p{
+    font-size:14px;
+    margin-bottom:15px;
+    color:#555;
+}
+
+/* ORDER NOW BUTTON */
+.order-now {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #b005b6;
+    color: #fff;
+    padding: 16px 14px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.order-now:hover {
+    background: #cc00b1b2;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="tealive" alt="Tealive Logo">
+</header>
+
+<!-- HERO VIDEO -->
+<div class="hero">
+    <video autoplay muted loop playsinline>
+        <source src="tlive.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- MAIN SECTION -->
+<section class="section">
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <button>Drinks +</button>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <h1>Drinks</h1>
+            <div class="badge">🔥 Served Hot</div>
+
+            <div class="menu-grid">
+
+                <div class="card">
+                    <img src="bangbangchocolate">
+                    <h3>Bang Bang Chocolate</h3>
+                    <p>Rich brown sugar milk tea with pearls</p>
+                </div>
+
+                <div class="card">
+                    <img src="bangbangmatcha">
+                    <h3>Bang Bang Matcha</h3>
+                    <p>Like matcha or coffee</p>
+                </div>
+
+                <div class="card">
+                    <img src="bangbangmilk">
+                    <h3>Bang Bang Milk</h3>
+                    <p>Milk ey mouse</p>
+                </div>
+
+                <div class="card">
+                    <img src="spanishlatte">
+                    <h3>Spanish Latte</h3>
+                    <p>Despacito Latteto</p>
+                </div>
+
+                <div class="card">
+                    <img src="strawberrypuddingsmoothie">
+                    <h3>Strawberry Pudding Smoothie</h3>
+                    <p>Colourful Fruity</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- ORDER BUTTON -->
+    <a href="https://www.tealive.com.my/menu" target="_blank" class="order-now">
+        Order Now
+    </a>
+
+    </div>
+</section>
+
+</body>
+</html>
