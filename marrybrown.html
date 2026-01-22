@@ -1,0 +1,223 @@
+<style>
+.mb-hero {
+    position: relative;
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url('marrybrown-chicken.jpg') center/cover no-repeat;
+    overflow: hidden;
+}
+
+/* LOGO */
+.mb-logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 5;
+}
+
+.mb-logo img {
+    width: 120px;
+}
+
+/* ORDER NOW BUTTON */
+.order-now {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #ff0000;
+    color: #fff;
+    padding: 16px 14px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.order-now:hover {
+    background: #cc0000;
+}
+
+/* RED CURVE */
+.mb-curve {
+    position: absolute;
+    bottom: -120px;
+    left: -10%;
+    width: 120%;
+    height: 420px;
+    background: #ff0000;
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    z-index: 3;
+}
+.mb-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    z-index: 1;
+}
+.mb-curve img {
+    width: 300px;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* TEXT IN RED CURVE AREA */
+.mb-curve-content {
+    position: absolute;
+    top: 90px;
+    left: 80px;
+    max-width: 520px;
+    color: #fff;
+    z-index: 6;
+}
+
+.mb-curve-content h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.mb-curve-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.mb-curve-content a {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* AUTO SLIDING MENU (ATAS KAWASAN MERAH) */
+.mb-slider {
+    position: absolute;
+    bottom: 20px; /* adjust supaya betul-betul atas merah */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.mb-slider-track {
+    display: flex;
+    width: max-content;
+    animation: slideRight 25s linear infinite;
+}
+
+.mb-slider-item {
+    margin: 0 40px;
+    text-align: center;
+}
+
+.mb-slider-item img {
+    width: 220px;
+    height: auto;
+}
+
+.mb-slider-item p {
+    margin-top: 12px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* ANIMATION */
+@keyframes slideRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+</style>
+
+<section class="mb-hero">
+
+    <!-- VIDEO BACKGROUND (KAWASAN KELABU) -->
+<video autoplay muted loop playsinline class="mb-video">
+    <source src="iklan mb.mp4" type="video/mp4">
+</video>
+
+    <!-- LOGO -->
+    <div class="mb-logo">
+        <img src="marrybrown" alt="Marrybrown Logo">
+    </div>
+
+    <!-- ORDER BUTTON -->
+    <a href="https://marrybrown.com/" target="_blank" class="order-now">
+        Order Now
+    </a>
+
+    <!-- MOVING MENU SLIDER -->
+<div class="mb-slider">
+    <div class="mb-slider-track">
+
+        <div class="mb-slider-item">
+            <img src="luckyplate" alt="">
+            <p>Lucky Plate</p>
+        </div>
+
+        <div class="mb-slider-item">
+            <img src="Chick A Licious" alt="">
+            <p>Chick-A-Licious®</p>
+        </div>
+
+        <div class="mb-slider-item">
+            <img src="cheesy chicken" alt="">
+            <p>Cheesy Chicken</p>
+        </div>
+
+        <div class="mb-slider-item">
+            <img src="jumbo meal" alt="">
+            <p>Jumbo Meal</p>
+        </div>
+
+        <!-- DUPLICATE FOR SMOOTH LOOP -->
+        <div class="mb-slider-item">
+            <img src="luckyplate" alt="">
+            <p>Lucky Plate</p>
+        </div>
+
+        <div class="mb-slider-item">
+            <img src="Chick A Licious" alt="">
+            <p>Chick-A-Licious®</p>
+        </div>
+
+        <div class="mb-slider-item">
+            <img src="cheesy chicken" alt="">
+            <p>Cheesy Chicken</p>
+        </div>
+
+        <div class="mb-slider-item">
+            <img src="jumbo meal" alt="">
+            <p>Jumbo Meal</p>
+        </div>
+
+    </div>
+</div>
+
+    <!-- RED CURVE -->
+<div class="mb-curve">
+    
+</div>
+
+</section>
+
+
+
